@@ -8,7 +8,7 @@ require 'date'
 # Supported fiat currencies
 SUPPORTED_CURRENCIES = ['usd', 'chf', 'eur']
 # Currency used (default = usd)
-$currency = 'usd'
+$currency = nil
 
 # Supported tokens
 SUPPORTED_TOKENS = ['KSM', 'DOT', 'BTC', 'ETH', 'SOL', 'ADA', 'LUNA', 'XTZ', 'ADA', 'ALGO']
