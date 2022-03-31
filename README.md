@@ -12,7 +12,7 @@ Note that some tokens are not yet supported, including KAVA, FLOWH, FLOW, MINA, 
 
 ### Calculating Token Staking Rewards
 
-Run "ruby parser.rb *name of file* *currency*"
+Run "ruby parser.rb *filename* *currency*"
 
 It will show you all staking rewards from supported tokens received and their value. It will also show total tokens of each type received and total value in USD, EUR, or CHF, calculated at the time of receipt.
 
@@ -46,13 +46,13 @@ Total DOT Received: 12.58084628 ( 327.07 EUR )
 
 ### Calculating USD Rewards
 
-Run "ruby usd_parser.rb *name of file*"
+Run "ruby usd_parser.rb *filename*"
 
 It will show you all USD staking rewards received and their value. 
 
 ### Calculating Euro Rewards
 
-Run "ruby eur_parser.rb *name of file*"
+Run "ruby eur_parser.rb *filename*"
 
 It will show you all EUR staking rewards received and their value. 
 
