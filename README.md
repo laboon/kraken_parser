@@ -5,9 +5,7 @@ For parsing Kraken staking data
 
 Download "ledger" data from Kraken. You can get it from the "History - Export" tab. This will give you a CSV file.
 
-Note that currently this calculates USD "staking" differently than token staking. You need to use usd_parser.rb, and not parser.rb, for this. See below for details.
-
-Note that this 
+Note that currently this calculates USD and EUR "staking" differently than token staking. You need to use usd_parser.rb/eur_parser.rb, and not parser.rb, for this. See below for details.
 
 ### Calculating Token Staking Rewards
 
