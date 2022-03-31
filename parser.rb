@@ -54,7 +54,7 @@ def print_totals(total_tokens, total_value)
   SUPPORTED_TOKENS.each do |kind|
     if total_tokens[kind] > 0
       print "Total #{kind} Received: #{total_tokens[kind]} "
-      puts "( $#{total_value[kind].round(2)} #{$currency.upcase} )"
+      puts "( #{total_value[kind].round(2)} #{$currency.upcase} )"
     else
       puts "No #{kind} rewards found."
     end
