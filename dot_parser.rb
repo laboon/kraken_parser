@@ -1,9 +1,37 @@
 require 'date'
 
-if ARGV.count < 1
-  puts "You need to enter a filename."
-  exit 1
+SUPPORTED_CURRENCIES = [:USD, :CHF, :EUR]
+currency = :USD
+
+def check_args(args)
+  if args.count < 1
+    puts "You need to enter a filename."
+    exit 1
+  end
+
+  if args.count == 1
+    puts "Defaulting currency to USD."
+  end
+
+  if args.count > 2
+    puts "Too many arguments! Enter only FILENAME and CURRENCY."
+    puts "Supported currencies: #{SUPPORTED_CURRENCIES}"
+    exit 1
+  end
+
+  if args.count == 2
+    if !SUPPORTED_CURRENCIES.include?(args[1].upcase.to_sym)
+      puts "#{args[1]} is not a supported currency."
+      puts "Supported currencies: #{SUPPORTED_CURRENCIES}"
+      exit 1
+    end
+  end
+  
 end
+
+check_args(ARGV)
+
+exit 0
 
 
 file_loc = ARGV[0]
