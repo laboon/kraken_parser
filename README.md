@@ -1,11 +1,14 @@
 # kraken_parser
-For parsing Kraken staking data
+
+This will parse Kraken staking data and let you know how much you received in staking rewards, along with the USD/EUR/CHF value at the time of receipt. 
 
 ## Instructions
 
 Download "ledger" data from Kraken. You can get it from the "History - Export" tab. This will give you a CSV file.
 
 Note that currently this calculates USD and EUR "staking" differently than token staking. You need to use usd_parser.rb/eur_parser.rb, and not parser.rb, for this. See below for details.
+
+Note that some tokens are not yet supported, including KAVA, FLOWH, FLOW, MINA, TRX, and SCRT. See "Supported Tokens" below. Please file an issue if you would like these or other tokens to be supported and I can add them.
 
 ### Calculating Token Staking Rewards
 
