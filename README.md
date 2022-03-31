@@ -9,7 +9,13 @@ Download "ledger" data from Kraken. You can get it from the "History - Export" t
 
 Run "ruby dot_parser.rb *name of file*"
 
-It will show you all DOT staking rewards received and their value. It will also show total DOT received and total USD value
+It will show you all DOT staking rewards received and their value. It will also show total DOT received and total USD value.
+
+### Calculating KSM Rewards
+
+Run "ruby ksm_parser.rb *name of file*"
+
+It will show you all KSM staking rewards received and their value. It will also show total KSM received and total USD value.
 
 ### Calculating USD Rewards
 
@@ -19,7 +25,7 @@ It will show you all USD staking rewards received and their value. It will also 
 
 ### Information Source
 
-DOT prices were downloaded from CoinGecko and cover up until 31 Mar 2022. You can easily update by going to CoinGecko
+DOT prices were downloaded from CoinGecko and cover up until 31 Mar 2022. You can easily update by going to CoinGecko, selecting historic data, and then "export data".
 
 ### Future Plans
 
