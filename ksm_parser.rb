@@ -5,11 +5,12 @@ if ARGV.count < 1
   exit 1
 end
 
-
 file_loc = ARGV[0]
-stake_kind = "DOT.S"
+stake_kind = "KSM.S"
 
-price_file = "./dot-usd.csv"
+
+
+price_file = "./ksm-usd.csv"
 
 dot_prices = {}
 
@@ -53,7 +54,7 @@ end
 pp staking_data
 
 if staking_data.count.zero?
-  puts "No DOT staking events found in this CSV file."
+  puts "No KSM staking events found in this CSV file."
   exit 1
 end
 
@@ -70,9 +71,9 @@ staking_data.each do |event|
   usd_value = (dot_amount * price).round(2)
   total_dots += dot_amount
   total_usd_value += usd_value
-  puts "#{date}: #{dot_amount} DOT /  #{usd_value} USD"
+  puts "#{date}: #{dot_amount} KSM /  #{usd_value} USD"
   
 end
 
-puts "Total DOTs Received: #{total_dots}"
+puts "Total KSM Received: #{total_dots}"
 puts "Total USD Value: $#{total_usd_value.round(2)}"
