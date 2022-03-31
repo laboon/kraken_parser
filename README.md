@@ -34,11 +34,11 @@ Note that any tokens other than this will simply be ignored. For now, you will h
 #### Example
 
 ```
-$ ruby parser.rb ../staking-rewards-collector/kraken_data.csv eur
+$ ruby parser.rb kraken_data.csv eur
 
-2021-12-24: 3.70716535 DOT ( 95.72 eur )
-2021-12-28: 5.04562268 DOT ( 138.25 eur )
-2021-12-31: 3.82805825 DOT ( 93.1 eur )
+2021-12-24: 3.70716535 DOT ( 95.72 EUR )
+2021-12-28: 5.04562268 DOT ( 138.25 EUR )
+2021-12-31: 3.82805825 DOT ( 93.1 EUR )
 No KSM rewards found.
 Total DOT Received: 12.58084628 ( 327.07 EUR )
 ```
