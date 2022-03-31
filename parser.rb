@@ -11,7 +11,7 @@ SUPPORTED_CURRENCIES = ['usd', 'chf', 'eur']
 $currency = 'usd'
 
 # Supported tokens
-SUPPORTED_TOKENS = ['KSM', 'DOT']
+SUPPORTED_TOKENS = ['KSM', 'DOT', 'BTC', 'ETH', 'SOL', 'ADA', 'LUNA', 'XTZ', 'ADA', 'ALGO']
 
 # Supported "staking" versions of tokens according to Kraken
 SUPPORTED_TOKENS_S = SUPPORTED_TOKENS.map { |x| x + ".S" }
@@ -31,6 +31,7 @@ def check_args(args)
 
   if args.count == 1
     puts "Defaulting currency to USD."
+    $currency = 'usd'
   end
 
   if args.count > 2
@@ -70,7 +71,7 @@ end
 check_args(ARGV)
 
 file_loc = ARGV[0]
-$currency = ARGV[1]
+$currency = ARGV[1] if $currency.nil?
 
 all_prices = {}
 
@@ -78,6 +79,7 @@ SUPPORTED_TOKENS.each do |token|
   stake_kind = token + ".S"
   price_file = "./data/#{token.downcase}-#{$currency}.csv"
   prices = {}
+
 
   # Load in pricing information
 

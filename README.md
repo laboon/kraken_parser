@@ -7,11 +7,28 @@ Download "ledger" data from Kraken. You can get it from the "History - Export" t
 
 Note that currently this calculates USD "staking" differently than token staking. You need to use usd_parser.rb, and not parser.rb, for this. See below for details.
 
-### Calculating DOT and KSM Rewards
+Note that this 
+
+### Calculating Token Staking Rewards
 
 Run "ruby parser.rb *name of file* *currency*"
 
-It will show you all DOT and KSM staking rewards received and their value. It will also show total DOT and KSM received and total value in USD, EUR, or CHF.
+It will show you all staking rewards from supported tokens received and their value. It will also show total tokens of each type received and total value in USD, EUR, or CHF, calculated at the time of receipt.
+
+#### Supported Tokens
+
+1. DOT (Polkadot)
+2. KSM (Kusama)
+3. BTC (Bitcoin)
+4. ETH (Ethereum)
+5. SOL (Solana)
+6. ADA (Cardano)
+7. LUNA (Terra)
+8. XTZ (Tezos)
+9. ATOM (Cosmos)
+10. ALGO (Algorand)
+
+Note that any tokens other than this will simply be ignored. For now, you will have to calculate them manually (or make a PR to add them here).
 
 #### Example
 
@@ -30,13 +47,20 @@ Total DOT Received: 12.58084628 ( 327.07 EUR )
 
 Run "ruby usd_parser.rb *name of file*"
 
-It will show you all USD staking rewards received and their value. It will also show total USD.M received and total USD value (which are the same, since we assume that the USD.M are equal to USD).
+It will show you all USD staking rewards received and their value. 
+
+### Calculating Euro Rewards
+
+Run "ruby eur_parser.rb *name of file*"
+
+It will show you all EUR staking rewards received and their value. 
+
 
 ### Information Source
 
-DOT prices were downloaded from CoinGecko and cover up until 31 Mar 2022. You can easily update by going to CoinGecko, selecting historic data, and then "export data".
+Prices were downloaded from CoinGecko and cover up until 31 Mar 2022. You can easily update by going to CoinGecko, selecting historic data, and then "export data". You just need to replace the relevant file in the ./data subdirectory. Note that name and case matters! Files downloaded from CoinGecko have a -max suffix that needs to be deleted.
 
 ### Future Plans
 
-1. Combine code into a single file and show all staking rewards.
-2. Support other tokens (should be relatively straightforward).
+2. Support all tokens that Kraken supports - KAVA, FLOWH, FLOW, MINA, TRX, SCRT are still missing.
+2. Move EUR/USD to parser.rb. This should just involve reading ".M" instead of ".S" as the suffix for these "tokens".
