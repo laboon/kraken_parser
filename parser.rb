@@ -11,7 +11,7 @@ SUPPORTED_CURRENCIES = ['usd', 'chf', 'eur']
 $currency = nil
 
 # Supported tokens
-SUPPORTED_TOKENS = ['KSM', 'DOT', 'BTC', 'ETH', 'SOL', 'ADA', 'LUNA', 'XTZ', 'ADA', 'ALGO']
+SUPPORTED_TOKENS = ['KSM', 'DOT', 'BTC', 'ETH', 'SOL', 'ADA', 'LUNA', 'XTZ', 'ADA', 'ALGO', 'SCRT', 'KAVA', 'FLOW', 'MINA', 'TRX']
 
 # Supported "staking" versions of tokens according to Kraken
 SUPPORTED_TOKENS_S = SUPPORTED_TOKENS.map { |x| x + ".S" }

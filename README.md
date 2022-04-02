@@ -1,6 +1,8 @@
 # kraken_parser
 
-This will parse Kraken staking data and let you know how much you received in staking rewards, along with the USD/EUR/CHF value at the time of receipt. 
+This will parse Kraken staking data and let you know how much you received in staking rewards, along with the USD/EUR/CHF value at the time of receipt.
+
+Note: This will handle all staking rewards known to me (except FLOWH), although different countries and users will have different rewards available. See Supported Tokens, below, for a list. Any token not explicitly covered will be ignored by the parser.
 
 ## Instructions
 
@@ -8,7 +10,7 @@ Download "ledger" data from Kraken. You can get it from the "History - Export" t
 
 Note that currently this calculates USD and EUR "staking" differently than token staking. You need to use usd_parser.rb/eur_parser.rb, and not parser.rb, for this. See below for details.
 
-Note that some tokens are not yet supported, including KAVA, FLOWH, FLOW, MINA, TRX, and SCRT. See "Supported Tokens" below. Please file an issue if you would like these or other tokens to be supported and I can add them.
+Note that some tokens are not yet supported. See "Supported Tokens" below. Right now, the only known token not supported is FLOWH; please file an issue if you would like these or other tokens to be supported and I can add them.
 
 ### Calculating Token Staking Rewards
 
@@ -28,6 +30,12 @@ It will show you all staking rewards from supported tokens received and their va
 8. XTZ (Tezos)
 9. ATOM (Cosmos)
 10. ALGO (Algorand)
+11. TRX (Tron)
+12. SCRT (Secret Network)
+13. FLOW (Flow)
+14. KAVA (Kava)
+15. MINA (Mina Protocol)
+
 
 Note that any tokens other than this will simply be ignored. For now, you will have to calculate them manually (or make a PR to add them here).
 
@@ -63,5 +71,4 @@ Prices were downloaded from CoinGecko and cover up until 31 Mar 2022. You can ea
 
 ### Future Plans
 
-2. Support all tokens that Kraken supports - KAVA, FLOWH, FLOW, MINA, TRX, SCRT are still missing.
 2. Move EUR/USD to parser.rb. This should just involve reading ".M" instead of ".S" as the suffix for these "tokens".
