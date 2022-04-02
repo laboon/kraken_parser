@@ -24,14 +24,14 @@ end
 # calculate staking data
 
 total_dots = 0
-total_usd_value = 0
+total_eur_value = 0
 
 staking_data.each do |event|
   date = event[0]
   value = event[1].to_f
-  total_value += value
+  total_eur_value += value
   puts "#{date}: #{value} EUR"
   
 end
 
-puts "Total EUR Value: $#{total_value.round(2)}"
+puts "Total EUR Value: €#{total_eur_value.round(2)}"

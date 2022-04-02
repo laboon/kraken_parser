@@ -9,6 +9,8 @@
 /test/tmp/
 /test/version_tmp/
 /tmp/
+*.csv
+*.zip
 
 # Used by dotenv library to load environment variables.
 # .env
