@@ -10,11 +10,15 @@ Download "ledger" data from Kraken. You can get it from the "History - Export" t
 
 Note that currently this calculates USD and EUR "staking" differently than token staking. You need to use usd_parser.rb/eur_parser.rb, and not parser.rb, for this. See below for details.
 
-Note that some tokens are not yet supported. See "Supported Tokens" below. Right now, the only known token not supported is FLOWH; please file an issue if you would like these or other tokens to be supported and I can add them.
+Note that some tokens are not yet supported. See "Supported Tokens" below. Right now, the only known token not supported is FLOWH; please file an issue if you would like these or other tokens to be supported and I can see about adding them.
 
 ### Calculating Token Staking Rewards
 
-Run "ruby parser.rb *filename* *currency*"
+Run "ruby parser.rb *filename* *currency* *output_file*"
+
+*currency* is optional. If not specified, it will default to USD.
+
+*output_file* is optional. If not specified, it will default to results.csv in the current directory.
 
 It will show you all staking rewards from supported tokens received and their value. It will also show total tokens of each type received and total value in USD, EUR, or CHF, calculated at the time of receipt.
 
